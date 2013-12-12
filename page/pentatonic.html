@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>pentatonic</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/interface.js"></script>
+	<style>
+	body{
+		overflow:hidden;
+		margin:0;
+		padding:0;
+		background: #000;
+	}
+	canvas{
+		position:absolute;
+		border:none;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin:auto;
+	}
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		
+		var canvas = document.getElementById('c');
+		var context = canvas.getContext('2d');
+		var w = $('#c').attr('width'); 
+		var h = $('#c').attr('height');
+
+		function draw(w,h,r){
+		
+			function pentagram( context, x, y, radius, rotate, strokewidth, letters ){
+			    context.beginPath();
+			    
+			    for ( var i = 0; i <= 5 * Math.PI; i += ( 4 * Math.PI ) / 5 ) {
+			        context.lineTo( x + radius * Math.cos(i + rotate), y + radius * Math.sin(i + rotate));       
+			    }
+			    
+			    context.strokeStyle = "#FFF";
+			 	context.lineWidth = window.innerWidth/100;
+			 	context.stroke();
+			 	context.closePath();
+
+			    if ( letters ) {
+			    	var word = "ᏨⓃℱ$ℕ";
+			    	a = 0;
+			    	radius = radius + radius/2;
+			    	rotate = Math.PI+2.7*Math.PI/9;
+			    	context.beginPath();
+			        context.font = '24pt Times New Roman';
+			        for ( var i = Math.PI /5; i <= 2*Math.PI; i += 2*( Math.PI )/5 ) {
+			        	context.textAlign = 'center';
+			        	context.fillStyle = '#FFF';
+			        	context.fillText(word[a], x + radius * Math.cos(i + rotate), y + 10 + radius * Math.sin(i + rotate));
+			        	a += 1
+			    	}
+			        context.strokeStyle = "#F0F";
+			 		context.lineWidth = strokewidth;
+			   		context.stroke();
+			        context.closePath();
+			    }
+
+			}
+			 
+			pentagram ( context, w/2, h/2, r/2, -Math.PI/2, w/10, true);
+		}
+
+		function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = 2*window.innerWidth/3;
+            draw(canvas.width,canvas.height,canvas.width/6); 
+    	}
+
+    	resizeCanvas();
+    	
+    	// resize the canvas to fill browser window dynamically
+	    window.addEventListener('resize', resizeCanvas, false); 
+	})
+	</script>
+</head>
+<body>
+	<canvas id="c"></canvas>
+</body>
+</html>
