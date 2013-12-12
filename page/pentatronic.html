@@ -12,7 +12,7 @@
 		padding:0;
 		background: #000;
 	}
-	canvas{
+	#c{
 		position:absolute;
 		border:none;
 		top: 0;
@@ -20,6 +20,14 @@
 		bottom: 0;
 		left: 0;
 		margin:auto;
+		z-index: 1;
+	}
+	#v{
+		width:100%;
+		height: 100%;
+		border:none;
+		padding:none;
+		z-index: -2
 	}
 	</style>
 	<script type="text/javascript">
@@ -27,6 +35,7 @@
 		
 		var canvas = document.getElementById('c');
 		var context = canvas.getContext('2d');
+		context.style.z-index;
 		var w = $('#c').attr('width'); 
 		var h = $('#c').attr('height');
 
@@ -35,7 +44,7 @@
 			function pentagram( context, x, y, radius, rotate, strokewidth, letters ){
 			    context.beginPath();
 			    
-			    for ( var i = 0; i <= 5 * Math.PI; i += ( 4 * Math.PI ) / 5 ) {
+			    for ( var i = 0; i <= 5 * Math.PI; i += 4*Math.PI/5 ) {
 			        context.lineTo( x + radius * Math.cos(i + rotate), y + radius * Math.sin(i + rotate));       
 			    }
 			    
@@ -48,10 +57,9 @@
 			    	var word = "ᏨⓃℱ$ℕ";
 			    	a = 0;
 			    	radius = radius + radius/2;
-			    	rotate = Math.PI+2.7*Math.PI/9;
 			    	context.beginPath();
 			        context.font = '24pt Times New Roman';
-			        for ( var i = Math.PI /5; i <= 2*Math.PI; i += 2*( Math.PI )/5 ) {
+			        for ( var i = 0; i <= 2*Math.PI -1; i += 2*Math.PI/5 ) {
 			        	context.textAlign = 'center';
 			        	context.fillStyle = '#FFF';
 			        	context.fillText(word[a], x + radius * Math.cos(i + rotate), y + 10 + radius * Math.sin(i + rotate));
@@ -82,6 +90,11 @@
 	</script>
 </head>
 <body>
+	<!-- <video id="v" autoplay poster="img/pentatronic.png">
+	<source src=video.webm type=video/webm>
+    <source src=video.ogg type=video/ogg>
+    <source src=video.mp4 type=video/mp4>
+	</video> -->
 	<canvas id="c"></canvas>
 </body>
 </html>

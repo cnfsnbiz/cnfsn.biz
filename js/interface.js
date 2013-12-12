@@ -17,7 +17,7 @@ jQuery.fn.Place = function() {
 	};
 
 function MakeInterface(){
-	var button = '<form><input type="button" id="interfaceButton" value="BUTTON" name="next"/></form>';
+	var button = '<input type="button" id="interfaceButton" value="BUTTON" name="next" onClick="window.location.reload()"/>';
 	$('body').append(button)
 	$('#interfaceButton').Place();
 }
