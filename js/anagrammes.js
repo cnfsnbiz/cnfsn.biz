@@ -34,13 +34,13 @@ $(document).ready(function(){
 
 	setInterval(function(){
 		$("#word1").text("confusing bu"+business[Math.floor(Math.random()*business.length)]+"ess with ");
-	},Math.random()*3000+Math.random()*3000);
+	},Math.random()*5000+Math.random()*5000);
 
 	setInterval(function(){
 		$("#word2").text(base+confusion[Math.floor(Math.random()*confusion.length)]);
-	},Math.random()*3000+Math.random()*3000);
+	},Math.random()*5000+Math.random()*5000);
 			
 	setInterval(function(){
 		$('title').text(base+confusing[Math.floor(Math.random()*business.length)]+" bu"+business[Math.floor(Math.random()*business.length)]+"ess")
-	},Math.random()*3000+Math.random()*3000);
+	},Math.random()*5000+Math.random()*5000);
 })
