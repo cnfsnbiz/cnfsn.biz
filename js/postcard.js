@@ -25,27 +25,19 @@ function init() {
     // scene
 
     scene = new THREE.Scene();
-    //scene.fog = new THREE.FogExp2( 0xcccccc, 0.002 );
 
     // lights
 
-    light = new THREE.DirectionalLight( 0xffeebb );
-    light.position.set( 1, 1, 1 );
+    light = new THREE.DirectionalLight( 0xffffff );
+    light.position.set( 0, 0.25, 0.5 );
     scene.add( light );
 
-    light = new THREE.DirectionalLight( 0xffeebb );
-    light.position.set( -1, -1, -1 );
+    light = new THREE.DirectionalLight( 0xffffff );
+    light.position.set( 0, -0.25, -0.5 );
     scene.add( light );
 
-    light = new THREE.AmbientLight( 0xffeebb );
+    light = new THREE.AmbientLight( 0xffffff );
     scene.add( light );
-    // lights
-    /*var ambient = new THREE.AmbientLight( 0xffffff );
-    scene.add( ambient );
-
-    var directionalLight = new THREE.DirectionalLight( 0xffeedd );
-    directionalLight.position.set( 0, 0.5, 1 ).normalize();
-    scene.add( directionalLight );*/
 
     // model
 
@@ -58,7 +50,6 @@ function init() {
     //
 
     renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    //renderer.setClearColor( scene.fog.color, 1 );
     renderer.setSize( window.innerWidth, window.innerHeight );
     container.appendChild( renderer.domElement );
 
