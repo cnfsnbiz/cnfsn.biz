@@ -57,7 +57,7 @@ function init() {
 
     //
 
-    renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     //renderer.setClearColor( scene.fog.color, 1 );
     renderer.setSize( window.innerWidth, window.innerHeight );
     container.appendChild( renderer.domElement );
