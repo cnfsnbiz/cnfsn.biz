@@ -1,0 +1,44 @@
+html{
+    font-size: 16px
+}
+body{
+    background: blue;
+    color:white;
+    position:relative;
+    padding:0;
+    margin:0;
+    height:100%;
+    width:100%;
+    z-index: 0;
+    overflow: hidden;
+}
+#word{
+    z-index: 1;
+    font-family: "Times New Roman", serif;
+    font-size: 2rem;
+    font-style: normal;
+    position: fixed;
+    text-align: center;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin:auto;
+    width:720px;
+    height:49px;
+    -webkit-transform: scaleY(1.5);
+    -moz-transform: scaleY(1.5);
+    transform: scaleY(1.5);
+}
+#interfacebutton {
+    position: absolute;
+    background: url(../img/btn.png);
+    width:103px;
+    height:28px;
+    z-index: 99
+}
+#interfacebutton button{
+}
+#mail{
+    z-index: 98
+}
+a{
+    text-decoration: none
+}

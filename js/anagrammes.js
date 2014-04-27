@@ -1,46 +1,43 @@
 $(document).ready(function(){
-	var business = ["sin",
-							"nis",
-							"sin",
-							"isn",
-							"ins"];
+    var confusing = ["fusing",
+                    "fsuing",
+                    "sfuing",
+                    "ufsing",
+                    "usfing",
+                    "sufing"];
 
-			var confusing = ["fusing",
-							"fsuing",
-							"sfuing",
-							"ufsing",
-							"usfing",
-							"sufing"];
+    var business = ["sin",
+                    "nis",
+                    "sin",
+                    "isn",
+                    "ins"];
 
-			var confusion = ["fusion",
-							"fsuion",
-							"fiuson",
-							"fuison",
-							"fusoin",
-							"sufion"];
-			var base = "con"; //l'origine du monde
+    var confusion = ["fusion",
+                    "fsuion",
+                    "fiuson",
+                    "fuison",
+                    "fusoin",
+                    "sufion"];
+    var base = "con"; //l'origine du monde
 
-	setInterval(function()
-	        {
-	            if($("#NW, #NE, #SW, #SE").css("visibility") == "visible")
-	            {
-	                $("#NW, #NE, #SW, #SE").css('visibility','hidden');
-	            }
-	            else
-	            {
-	                $("#NW, #NE, #SW, #SE").css('visibility','visible');
-	            }
-	        }, 20);
+    function randomWurd(wordArray){
+        return wordArray[Math.floor(Math.random()*wordArray.length)]
+    }
+    function randomTime(seconds){
+        return Math.random()*(seconds*1000);
+    }
+    function anagramme(arrayBusiness,arrayConfusion,arrayConfusing){
+        setInterval(function(){
+            $("#word1").text("confusing bu"+randomWurd(arrayBusiness)+"ess with ");
+        },randomTime(5));
 
-	setInterval(function(){
-		$("#word1").text("confusing bu"+business[Math.floor(Math.random()*business.length)]+"ess with ");
-	},Math.random()*5000+Math.random()*5000);
+        setInterval(function(){
+            $("#word2").text(base+randomWurd(arrayConfusion));
+        },randomTime(5));
 
-	setInterval(function(){
-		$("#word2").text(base+confusion[Math.floor(Math.random()*confusion.length)]);
-	},Math.random()*5000+Math.random()*5000);
-			
-	setInterval(function(){
-		$('title').text(base+confusing[Math.floor(Math.random()*business.length)]+" bu"+business[Math.floor(Math.random()*business.length)]+"ess")
-	},Math.random()*5000+Math.random()*5000);
+        setInterval(function(){
+            $('title').text(base+randomWurd(arrayConfusing)+" bu"+randomWurd(arrayBusiness)+"ess")
+        },randomTime(5));
+    }
+    anagramme(business,confusion,confusing)
 })
