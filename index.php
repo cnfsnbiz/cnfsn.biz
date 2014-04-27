@@ -4,11 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>confusing business</title>
 	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-	<link rel="stylesheet" href="css/confusing.css">
+	<link rel="stylesheet" href="/css/confusing.css">
 	<script src="/js/jquery-latest.min.js"></script>
 	<script src="/js/modernizr.js"></script>
 	<script src="/js/navigate.js"></script>
 	<script src="/js/raphael-min.js"></script>
+	<script src="/js/three.min.js"></script>
 	<script src="/js/init.js"></script>
 </head>
     <body>
