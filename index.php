@@ -11,6 +11,7 @@
 	<script src="/js/raphael-min.js"></script>
 	<script src="/js/three.min.js"></script>
 	<script src="/js/init.js"></script>
+	<script src="/js/scripts.js"></script>
 </head>
     <body>
         <section id="content">
@@ -19,7 +20,9 @@
                 <span id="word2">confiuson</span>
             </div>
             <script src="/js/anagrammes.js"></script>
-            <script src="/js/scripts.js"></script>
+            <script>
+                interface();
+            </script>
         </section>
     </body>
 </html>

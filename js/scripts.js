@@ -18,4 +18,18 @@ function interface(){
         $('#interfacebutton').Place();
     })
 }
-interface();
+
+function appendStylesheet(stylesheet) {
+  // Setup a flag to toggle if we find the stylesheet
+  var bStylesheetExists = false;
+  $('link').each( function(){ 
+    if ( $(this).attr('href') === stylesheet) {
+       bStylesheetExists = true;
+    }
+  })
+
+  // If we don't find it, add it.
+  if(bStylesheetExists === false) {
+    $('head').append('<link rel="stylesheet" href="/css/'+stylesheet+'" type="text/css" />');
+  }
+}

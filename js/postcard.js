@@ -18,7 +18,7 @@ function init() {
     //document.body.appendChild( container );
 
     camera = new THREE.PerspectiveCamera( 36, window.innerWidth / window.innerHeight, 1, 500 );
-    camera.position.z = 7;
+    camera.position.z = 14;
 
     controls = new THREE.OrbitControls( camera );
     controls.addEventListener( 'change', render );

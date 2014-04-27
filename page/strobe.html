@@ -11,16 +11,17 @@
 	<script src="/js/raphael-min.js"></script>
 	<script src="/js/three.min.js"></script>
 	<script src="/js/init.js"></script>
+	<script src="/js/scripts.js"></script> 
 </head>
     <body>
         <section id="content">
             <div id="canvas"></div>
             <div id="strobe"></div>
-            <script>
-                $('head').append('<link rel="stylesheet" href="/css/strobe.css">');
-            </script>
             <script src="/js/strobe.js"></script>
-            <script src="/js/scripts.js"></script> 
+            <script>
+                interface();
+                appendStylesheet('strobe.css');
+            </script>
         </section>
     </body>
 </html>
