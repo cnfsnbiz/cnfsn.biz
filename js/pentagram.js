@@ -39,7 +39,7 @@ function initAll(){
         "stroke-width":20,
         "stroke":"red"
     });
-    var txt = archtype.pentatext(cW/2, cH/2, 160+80, "CNFSN", "Times", "red", 40);
+    var txt = archtype.pentatext(cW/2, cH/2, 160+80, "ᏨⓃℱ$ℕ", "Times", "red", 40);
     setInterval(function(){ $('#canvas').css("opacity",Math.random()*0.2)}, 5)
 }
 initAll(); 
