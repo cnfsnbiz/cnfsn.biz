@@ -23,7 +23,7 @@ function appendStylesheet(stylesheet) {
   // Setup a flag to toggle if we find the stylesheet
   var bStylesheetExists = false;
   $('link').each( function(){ 
-    if ( $(this).attr('href') === stylesheet) {
+    if ( $(this).attr('href') === '/css/'+stylesheet) {
        bStylesheetExists = true;
     }
   })
