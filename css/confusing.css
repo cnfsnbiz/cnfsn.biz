@@ -55,3 +55,7 @@ a{
 #meta a{
     text-decoration: underline
 }
+#title {
+    position: fixed;
+    top: 0;
+}

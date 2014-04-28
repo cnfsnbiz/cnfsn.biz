@@ -36,4 +36,5 @@ function appendStylesheet(stylesheet) {
 
 function addMeta(info,color){
     $('#content').append('<aside id="meta" style="color:'+color+'">'+info+'</aside>');
+    $('a').css('color',color);
 }
