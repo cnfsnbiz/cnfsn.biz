@@ -42,10 +42,16 @@ body{
 a{
     text-decoration: none
 }
-#meta{
-    position:fixed;
-    top:10;
-    right:10;
+#meta {
+    position: fixed;
+    top: 10px;
+    left: 70px;
+    margin: auto;
     font-size: 1rem;
-    font-family: sans-serif
+    font-family: sans-serif;
+    width: 300px;
+    text-shadow: 0 0 5px black;
+}
+#meta a{
+    text-decoration: underline
 }

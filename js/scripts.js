@@ -34,6 +34,6 @@ function appendStylesheet(stylesheet) {
   }
 }
 
-function addMeta(info){
-    $('#content').append('<aside id="meta">'+info+'</aside>');
+function addMeta(info,color){
+    $('#content').append('<aside id="meta" style="color:'+color+'">'+info+'</aside>');
 }
