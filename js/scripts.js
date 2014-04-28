@@ -33,3 +33,7 @@ function appendStylesheet(stylesheet) {
     $('head').append('<link rel="stylesheet" href="/css/'+stylesheet+'" type="text/css" />');
   }
 }
+
+function addMeta(info){
+    $('#content').append('<aside id="meta">'+info+'</aside>');
+}

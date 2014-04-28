@@ -42,3 +42,10 @@ body{
 a{
     text-decoration: none
 }
+#meta{
+    position:fixed;
+    top:10;
+    right:10;
+    font-size: 1rem;
+    font-family: sans-serif
+}
